@@ -1,0 +1,18 @@
+﻿@using AppHarborMongoDBDemo.Models
+@model IEnumerable<Resume<WorkExperience>>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thingies</h2>
+<ul>
+@foreach (var resume in Model)
+{
+	<li>
+		@Html.Raw(resume.ResumeName.ToString())
+	</li>
+}
+</ul>
+@Html.ActionLink("new", "New")
