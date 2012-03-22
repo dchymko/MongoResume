@@ -17,7 +17,7 @@ namespace AppHarborMongoDBDemo.Controllers
 
 		public ActionResult Index()
 		{
-			return View(_collection.FindAll());
+			return View("Resume", _collection.FindAll());
 		}
 
         public ActionResult PrintResume(int invoiceId= 0)
