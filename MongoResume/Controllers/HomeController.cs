@@ -20,6 +20,11 @@ namespace AppHarborMongoDBDemo.Controllers
 			return View("Resume", _collection.FindAll());
 		}
 
+        public ActionResult Index2()
+        {
+            return View("Index", _collection.FindAll());
+        }
+
         public ActionResult PrintResume(int invoiceId= 0)
         {
             return new ActionAsPdf(
