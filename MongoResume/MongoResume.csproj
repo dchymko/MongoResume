@@ -68,12 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ResumeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Resume.cs" />
-    <Compile Include="Models\WorkExperience.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -144,11 +143,11 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\New.cshtml" />
+    <Content Include="Views\Resume\Index.cshtml" />
+    <Content Include="Views\Resume\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Home\Resume.cshtml" />
+    <Content Include="Views\Resume\Resume.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_ResumeLayout.cshtml" />

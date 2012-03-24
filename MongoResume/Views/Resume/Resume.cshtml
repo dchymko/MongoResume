@@ -1,5 +1,5 @@
 ﻿@using MongoResume.Models;
-@model Resume<WorkExperience>
+@model Resume
 
 @{
     ViewBag.Title = "Resume";
@@ -62,22 +62,24 @@
 							<h2>Skills</h2>
 						</div>
 						<div class="yui-u">
-
+                                @foreach (var group in Model.skillGroups)
+                                {
+                                    
 								<div class="talent">
-									<h2>Web Programming</h2>
-									<p>ASP.NET, C#, VB, PHP, Kohana, Java,HTML5, AJAX, jQuery.	</p>
+									<h2>@group.groupName</h2>
+									<p>
+                                    @foreach(var item in group.skillList.Select((x, i) => new { Data = x, Index = i } ))   {
+                                 
+                                        @item.Data
+                                        if (item.Index < group.skillList.Length-1)
+                                        {
+                                             @Html.Raw(", ")
+                                        }
+                                    }
+                                    </p>
 								</div>
-
-								<div class="talent">
-									<h2>Database</h2>
-									<p>Advanced queries & optimization in MSSQL & MySQL. </p>
+                                }
 								</div>
-
-								<div class="talent">
-									<h2>API</h2>
-									<p>Zendesk, Facebook, Twilio, Twitter using JSON, XML, SOAP and REST.</p>
-								</div>
-						</div>
 					</div><!--// .yui-gf -->
                     <!--
 					<div class="yui-gf">
@@ -114,51 +116,21 @@
 						</div><!--// .yui-u -->
 
 						<div class="yui-u">
-
+                        @foreach (var job in Model.workExp)
+                        {
 							<div class="job">
-								<h2>Universal Mind</h2>
-								<h3>Contracted Developer</h3>
-								<h4>2011-2012</h4>
-								<p><ul><li>Developed credit application web services for major North American bank using  .NET WCF & MVC3
-<li>Built customized CMS for interior design firm with SiteFinity, C#.NET and WCF Web Services 
-<li>Provided problem solving & best practices advice on issues and technical challenges
-
-</ul></p>
-							</div>
-
-
-
-                            <div class="job">
-								<h2>infoMetrix</h2>
-								<h3>Owner / Senior Developer</h3>
-								<h4>1999-Present</h4>
-								<p><ul><li>Built a PHP Facebook app that has thousand of interactions per day by a user base of over one million.
-                                <li>Created a career-based web application with advanced resume searching and matching logic
-                                <li>Worked with brands such as Nestle and Free the Children
+								<h2>@job.company</h2>
+								<h3>@job.jobTitle</h3>
+								<h4>@job.startDate.AsDateTime().ToString("yyyy") - @job.endDate.AsDateTime().ToString("yyyy") </h4>
+                                <p><ul>
+                                @foreach (var task in job.tasks) {
+								<li>@task</li>
+                                }
                                 </ul></p>
 							</div>
+                        }
 
-							<div class="job">
-								<h2>Yamnuska Mountain Adventures</h2>
-								<h3>Contracted Web Consultant</h3>
-								<h4>2011-2012</h4>
-								<p><ul>
-                                <li>Developed a trip reservation system that integrated with a 3rd party CRM via web services
-                                <li>Implemented cross-platform encryption between servers to protect sensitive credit card data
-                                <li>Led project communications and conveyed technical terminology to the client in business terms
-                                </ul>
-                                </p>
-							</div>
 
-                            <div class="job last">
-								<h2>Fujistu</h2>
-								<h3>Contracted Web Developer</h3>
-								<h4>2001-2004</h4>
-								<p><ul><li>Built a web-based exam system that would see daily use in testing centers across Canada
-                                    <li>Created web forms for applicants to electronically apply to provincial apprenticeship programs
-                                    </ul>
-</p>
-							</div>
 
 						</div><!--// .yui-u -->
 					</div><!--// .yui-gf -->
@@ -173,6 +145,8 @@
 
 		<div id="ft">
 			<p>Daryl Chymko &mdash; <a href="mailto:dchymko@infometrix.ca">dchymko@infometrix.ca</a> &mdash; (250) - 859-0222</p>
+            <p></p>
+            <p> Prefer @Html.ActionLink("JSON", "JSON","Resume" )?</p>
 		</div><!--// footer -->
 
 	</div><!-- // inner -->

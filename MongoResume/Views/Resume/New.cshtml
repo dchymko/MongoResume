@@ -1,0 +1,23 @@
+﻿@using MongoResume.Models;
+@model Resume
+
+@{
+	ViewBag.Title = "New";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New</h2>
+<div>
+	@using (Html.BeginForm("Create", "Resume")){
+		<p>
+		@*	@Html.LabelFor(x => x.Id)
+*@			Resume Name: @Html.TextBoxFor(x => x.resumeName) <br />
+            Company: @Html.TextBoxFor(x => x.workExp[0].company)<br />
+
+
+		</p>
+		<p>
+			<input type="submit" value="Submit" />
+		</p>
+	}
+</div>

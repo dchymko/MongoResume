@@ -24,7 +24,7 @@ namespace MongoResume
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Resume", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
         }
