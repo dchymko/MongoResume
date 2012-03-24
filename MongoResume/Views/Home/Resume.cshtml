@@ -1,6 +1,10 @@
-﻿@{
+﻿@using MongoResume.Models;
+@model Resume<WorkExperience>
+
+@{
     ViewBag.Title = "Resume";
     Layout = "~/Views/Shared/_ResumeLayout.cshtml";
+    
 }
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
@@ -24,15 +28,15 @@
 		<div id="hd">
 			<div class="yui-gc">
 				<div class="yui-u first">
-					<h1>Daryl Chymko</h1>
-					<h2>Web Developer</h2>
+					<h1>@Model.firstName @Model.lastName</h1>
+					<h2>@Model.jobTitle</h2>
 				</div>
 
 				<div class="yui-u">
 					<div class="contact-info">
 						<h3><a id="pdf" href="@Url.Content("~/Content/resume.pdf")">Download PDF</a></h3>
-						<h3><a href="mailto:dchymko@infometrix.ca">dchymko@infometrix.ca</a></h3>
-						<h3>(250) - 859-0222</h3>
+						<h3><a href="mailto:@Model.email">@Model.email</a></h3>
+						<h3>@Model.phone</h3>
 					</div><!--// .contact-info -->
 				</div>
 			</div><!--// .yui-gc -->
@@ -48,7 +52,7 @@
 						</div>
 						<div class="yui-u">
 							<p class="enlarge">
-								Daryl works with exceptional teams building great applications that people love to use.
+								@Model.profile
 							</p>
 						</div>
 					</div><!--// .yui-gf -->

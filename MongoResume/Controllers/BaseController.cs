@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using MongoDB.Driver;
 
-namespace AppHarborMongoDBDemo.Controllers
+namespace MongoResume.Controllers
 {
 	public abstract class BaseController : Controller
 	{

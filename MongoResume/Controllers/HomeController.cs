@@ -1,8 +1,9 @@
 ﻿using System.Web.Mvc;
-using AppHarborMongoDBDemo.Models;
+using MongoResume.Models;
 using MongoDB.Driver;
+using System.Collections.Generic;
 
-namespace AppHarborMongoDBDemo.Controllers
+namespace MongoResume.Controllers
 {
 	public class HomeController : BaseController
 	{
@@ -15,7 +16,11 @@ namespace AppHarborMongoDBDemo.Controllers
 
 		public ActionResult Index()
 		{
-			return View("Resume", _collection.FindAll());
+            Resume<WorkExperience> re = new Resume<WorkExperience>();
+            QueryDocument query = new QueryDocument("resumeCode", "darylchymko1");
+            re = _collection.FindOne(query);
+            return View("Resume", re);
+
 		}
 
         public ActionResult Index2()

@@ -7,7 +7,7 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson.Serialization;
 
-namespace AppHarborMongoDBDemo.Models
+namespace MongoResume.Models
 {
     [BsonIgnoreExtraElements]
     public class WorkExperience

@@ -8,25 +8,30 @@ using System.Web.Mvc;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace AppHarborMongoDBDemo.Models
+namespace MongoResume.Models
 {
     [BsonIgnoreExtraElements]
     public class Resume<K>
     {
         public Resume(K message)
         {
-            this.Time = DateTime.Now;
+            this.updatedTime = DateTime.Now;
             this.Message = message;
         }
         public Resume()
         {
-            this.Time = DateTime.Now;
+            this.updatedTime = DateTime.Now;
         }
         public K Message { get; set; }
         [BsonId]
         public ObjectId Id { get; set; }
-        public DateTime Time { get; set; }
-        public string ResumeName { get; set; }
-        //public string[] fields { get; set; } 
+        public DateTime updatedTime { get; set; }
+        public string resumeCode { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public string email { get; set; }
+        public string phone { get; set; }
+        public string jobTitle { get; set; }
+        public string profile { get; set; }
     }
 }
