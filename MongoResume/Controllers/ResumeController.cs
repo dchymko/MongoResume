@@ -3,6 +3,7 @@ using MongoResume.Models;
 using MongoDB.Driver;
 using System.Collections.Generic;
 using System;
+using Rotativa;
 
 namespace MongoResume.Controllers
 {
@@ -24,16 +25,10 @@ namespace MongoResume.Controllers
 
 		}
 
-        public ActionResult Index2()
+        public ActionResult PDF()
         {
-            return View("Index", _collection.FindAll());
+            return new ActionAsPdf("Index") { FileName = "resume.pdf" };
         }
-
-
-		public ActionResult New()
-		{
-			return View();
-		}
 
 
         public JsonResult Json()
