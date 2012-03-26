@@ -42,8 +42,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\MongoDB.Driver.dll</HintPath>
     </Reference>
-    <Reference Include="Premotion.AspNet.AppHarbor.Integration">
-      <HintPath>..\packages\Premotion.AspNet.AppHarbor.Integration.0.3.0\lib\net40\Premotion.AspNet.AppHarbor.Integration.dll</HintPath>
+    <Reference Include="Premotion.AspNet.AppHarbor.Integration, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Premotion.AspNet.AppHarbor.Integration.dll</HintPath>
     </Reference>
     <Reference Include="Rotativa">
       <HintPath>..\packages\Rotativa.1.2.2\lib\net40\Rotativa.dll</HintPath>
