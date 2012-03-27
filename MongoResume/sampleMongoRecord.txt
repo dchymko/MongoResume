@@ -1,0 +1,92 @@
+﻿{
+    "_id": {
+        "$oid": "4f69b20cc2ec341b4843269c"
+    },
+    "resumeName": "First",
+    "resumeCode": "darylchymko1",
+    "firstName": "Daryl",
+    "lastName": "Chymko",
+    "email": "dchymko@infometrix.ca",
+    "phone": "(250)-859-0222",
+    "jobtitle": "Web Developer",
+    "profile": "Daryl works with exceptional teams building great applications that people love to use.",
+    "workExp": [
+        {
+            "jobTitle": "Contracted Developer",
+            "company": "Universal Mind",
+            "startDate": "2011-09-30T07:00:00.000Z",
+            "endDate": "2012-03-24T09:20:22.402Z",
+            "tasks": [
+                "Developed credit application web services for major North American bank using .NET WCF & MVC3",
+                "Built customized CMS for interior design firm with SiteFinity, C#.NET and WCF Web Services",
+                "Provided problem solving & best practices advice on issues and technical challenges"
+            ]
+        },
+        {
+            "jobTitle": "Owner / Senior Developer",
+            "company": "infoMetrix",
+            "startDate": "1999-05-30T07:00:00.000Z",
+            "endDate": "2012-05-30T07:00:00.000Z",
+            "tasks": [
+                "Built a PHP Facebook app that has thousand of interactions per day by a user base of over one million.",
+                "Created a career-based web application with advanced resume searching and matching logic",
+                "Worked with brands such as Nestle and Free the Children"
+            ]
+        },
+        {
+            "jobTitle": "Contracted Web Developer",
+            "company": "Yamnusa Mountain Adventures",
+            "startDate": "2010-09-30T07:00:00.000Z",
+            "endDate": "2012-05-30T07:00:00.000Z",
+            "tasks": [
+                "Developed a trip reservation system that integrated with a 3rd party CRM via web services",
+                "Implemented cross-platform encryption between servers to protect sensitive credit card data",
+                "Led project communications and conveyed technical terminology to the client in business terms"
+            ]
+        },
+        {
+            "jobTitle": "Contracted Web Developer",
+            "company": "Fujitsu",
+            "startDate": "2004-02-01T07:00:00.000Z",
+            "endDate": "2005-12-30T09:20:22.402Z",
+            "tasks": [
+                "Built a web-based exam system that would see daily use in testing centers across Canada",
+                "Created web forms for applicants to electronically apply to provincial apprenticeship programs"
+            ]
+        }
+    ],
+    "skillGroups": [
+        {
+            "groupName": "Web",
+            "skillList": [
+                "ASP.NET",
+                "C#",
+                "VB",
+                "PHP",
+                "Kohana",
+                "Java",
+                "HTML5",
+                "AJAX",
+                "jQuery"
+            ]
+        },
+        {
+            "groupName": "Database",
+            "skillList": [
+                "Advanced queries & optimization in MSSQL & MySQL"
+            ]
+        },
+        {
+            "groupName": "API",
+            "skillList": [
+                "Zendesk",
+                "Facebook",
+                "Twilio",
+                "Twitter using JSON",
+                "XML",
+                "SOAP",
+                "REST"
+            ]
+        }
+    ]
+}
