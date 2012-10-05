@@ -4,7 +4,7 @@
 A simple datadriven resume example I write to learn MVC3 & Mongo DB in .NET
 
 ## Live Demo
-See [my resume](http://resume.darylchymko.ca) for a live version running on AppHarbor.
+See [my resume](http://mongotest-3.apphb.com/) for a live version running on AppHarbor.
 
 ## Getting started
 
